@@ -52,6 +52,11 @@ return [
             'path' => storage_path('framework/cache/data'),
         ],
 
+        'tfile' => [
+            'driver' => 'tfile',
+            'path'   => storage_path('framework/cache')
+        ],
+
         'memcached' => [
             'driver' => 'memcached',
             'persistent_id' => env('MEMCACHED_PERSISTENT_ID'),
