@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreatePedidoStatusTable extends Migration
+class LogsCreateTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,12 @@ class CreatePedidoStatusTable extends Migration
      */
     public function up()
     {
-        Schema::create('pedido_status', function (Blueprint $table) {
+        Schema::connection('mysql_log')->create('logs', function (Blueprint $table) {
             $table->increments('id');
 
-            $table->string('descricao');
+            $table->integer('user')->index();
+            $table->string('interface', 100)->index();
+            $table->longText('data');
 
             $table->timestamps();
             $table->softDeletes();
@@ -30,6 +32,6 @@ class CreatePedidoStatusTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('pedido_status');
+        //
     }
 }
