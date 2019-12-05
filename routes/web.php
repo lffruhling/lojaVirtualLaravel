@@ -34,4 +34,16 @@ Route::group(['prefix' => 'admin'], function () {
     Route::get('/tipo_pagamentos/{id}', 'Admin\TipoPagamentosController@edicao')->name('admin.tipo_pagamentos.edicao')->where(['id' => '[0-9]+']);
     Route::post('/tipo_pagamentos', 'Admin\TipoPagamentosController@save')->name('admin.tipo_pagamentos.post');
 
+    Route::get('/produtos', 'Admin\ProdutosController@index')->name('admin.produtos.index');
+    Route::post('/produtos/listagem', 'Admin\ProdutosController@listagem')->name('admin.produtos.listagem');
+    Route::get('/produtos/registro', 'Admin\ProdutosController@registro')->name('admin.produtos.registro');
+    Route::get('/produtos/{id}', 'Admin\ProdutosController@edicao')->name('admin.produtos.edicao')->where(['id' => '[0-9]+']);
+    Route::post('/produtos', 'Admin\ProdutosController@save')->name('admin.produtos.post');
+
+    Route::get('/status', 'Admin\StatusController@index')->name('admin.status.index');
+    Route::post('/status/listagem', 'Admin\StatusController@listagem')->name('admin.status.listagem');
+    Route::get('/status/registro', 'Admin\StatusController@registro')->name('admin.status.registro');
+    Route::get('/status/{id}', 'Admin\StatusController@edicao')->name('admin.status.edicao')->where(['id' => '[0-9]+']);
+    Route::post('/status', 'Admin\StatusController@save')->name('admin.status.post');
+
 });
