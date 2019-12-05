@@ -21,7 +21,7 @@
         </div>
         <div class="card-body">
             <div class="">
-                {!!Form::open(['class' => 'form-vertical form-grid-pesquisa','url'=>route('admin.categorias.listagem')])!!}
+                {!!Form::open(['class' => 'form-vertical form-grid-pesquisa','url'=>route('admin.status.listagem')])!!}
                 <div class="row">
                     <div class="col-md-6 offset-6">
                         {!! Form::cText('q',  null, null, ['class' => 'form-control ']) !!}

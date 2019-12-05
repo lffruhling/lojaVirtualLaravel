@@ -14,7 +14,7 @@
                         {!! $row->nome !!}
                     </td>
                     <td class="text-center">
-                        <a href="{!! route('admin.categorias.edicao', ['id' => $row->id]) !!}" class=" margin-b-xs "><i class="fa fa-edit"></i></a>
+                        <a href="{!! route('admin.status.edicao', ['id' => $row->id]) !!}" class=" margin-b-xs "><i class="fa fa-edit"></i></a>
                     </td>
                 </tr>
             @endforeach

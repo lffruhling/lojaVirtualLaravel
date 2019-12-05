@@ -2,12 +2,8 @@
 
 namespace App\Model;
 
-class Produtos extends AbstractModel
+class Status extends AbstractModel
 {
-    protected $table = 'produtos';
-
-    public function categorias(){
-        return $this->hasOne(Categorias::class, 'id', 'categoria');
-    }
+    protected $table = 'status';
 
 }
