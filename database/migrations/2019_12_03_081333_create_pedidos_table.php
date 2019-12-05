@@ -24,7 +24,7 @@ class CreatePedidosTable extends Migration
 
             $table->foreign('user')->references('id')->on('users');
             $table->foreign('tipo_pagamento')->references('id')->on('tipo_pagamentos');
-            $table->foreign('status')->references('id')->on('pedido_status');
+//            $table->foreign('status')->references('id')->on('pedido_status');
 
             $table->timestamps();
             $table->softDeletes();

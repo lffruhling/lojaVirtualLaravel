@@ -3,7 +3,9 @@
 namespace App\Providers;
 
 use App\Events\CategoriasEvent;
+use App\Events\TipoPagamentosEvent;
 use App\Model\Categorias;
+use App\Model\Tipopagamentos;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -26,5 +28,6 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         Categorias::observe(CategoriasEvent::class);
+        Tipopagamentos::observe(TipoPagamentosEvent::class);
     }
 }
